@@ -1,0 +1,14 @@
+{% extends 'pattern.html' %}
+
+{% block content %}
+<section style="margin-left: 40px;">
+    <h1>Добро пожаловать на главную страницу</h1>
+    <p style="margin-top: 40px;">API для взаимодействия с задачами</p>
+    <a href="{{ url_for('add_task') }}">Добавить задачу</a>
+    <a href="{{ url_for('get_list_task') }}">Посмотреть список задач</a>
+    <a href="{{ url_for('get_task') }}">Просмотреть задачу</a>
+    <a href="{{ url_for('update') }}">Изменить задачу</a>
+    <a href="{{ url_for('delete') }}">Удалить задачу</a>
+</section>
+
+{% endblock %}

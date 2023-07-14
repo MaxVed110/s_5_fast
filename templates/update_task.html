@@ -1,0 +1,23 @@
+{% extends 'pattern.html' %}
+
+{% block content %}
+<form action="{{ url_for('update_data_task') }}" method="post">
+    <p>
+        Введите id задачи <br>
+        <input name="id_task">
+    </p>
+    <p>
+        Название задачи <br>
+        <input name="name_task">
+    </p>
+    <p>
+        Описание задачи <br>
+        <input name="description">
+    </p>
+    <p>
+        Статус задачи <br>
+        <input name="status">
+    </p>
+    <input type="submit" value="Изменить задачу"/>
+</form>
+{% endblock %}

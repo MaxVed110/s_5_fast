@@ -1,0 +1,23 @@
+{% extends 'pattern.html' %}
+
+{% block content %}
+<table>
+    <tr>
+        <th style="padding-right: 20px;">id</th>
+        <th style="padding-right: 20px;">name</th>
+        <th style="padding-right: 20px;">email</th>
+        <th style="padding-right: 20px;">password</th>
+    </tr> <!--ряд с ячейками заголовков-->
+    {% for user in users %}
+    <tr>
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
+    </tr> <!--ряд с ячейками тела таблицы-->
+    {%endfor%}
+</table>
+<a href="{{ url_for('index') }}">
+    <button>Add user</button>
+</a>
+{% endblock %}

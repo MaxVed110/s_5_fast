@@ -1,0 +1,11 @@
+{% extends 'pattern.html' %}
+
+{% block content %}
+<form action="{{ url_for('get_data_task') }}" method="post">
+    <p>
+        Введите id задачи <br>
+        <input name="id_task">
+    </p>
+    <input type="submit" value="Получить данные"/>
+</form>
+{% endblock %}

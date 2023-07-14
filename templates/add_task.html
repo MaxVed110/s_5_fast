@@ -1,0 +1,21 @@
+{% extends 'pattern.html' %}
+
+{% block content %}
+
+<form action="{{ url_for('add_new_task') }}" method="post">
+    <p>
+        Название задачи <br>
+        <input name="name_task">
+    </p>
+    <p>
+        Описание задачи <br>
+        <input name="description">
+    </p>
+    <p>
+        Статус задачи <br>
+        <input name="status">
+    </p>
+    <input type="submit" value="Добавить задачу" />
+</form>
+
+{% endblock %}
